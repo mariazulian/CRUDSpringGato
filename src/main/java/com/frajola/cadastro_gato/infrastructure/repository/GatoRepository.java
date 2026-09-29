@@ -1,6 +1,7 @@
 package com.frajola.cadastro_gato.infrastructure.repository;
 
 import com.frajola.cadastro_gato.infrastructure.entitys.Gato;
+import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
@@ -8,4 +9,7 @@ import java.util.Optional;
 public interface GatoRepository extends JpaRepository<Gato, Integer> {
 
     Optional<Gato> findByRaca(String raca);
+
+    @Transactional
+    void deleteByRaca(String raca);
 }
