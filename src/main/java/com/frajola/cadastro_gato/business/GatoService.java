@@ -2,7 +2,9 @@ package com.frajola.cadastro_gato.business;
 
 import com.frajola.cadastro_gato.infrastructure.entitys.Gato;
 import com.frajola.cadastro_gato.infrastructure.repository.GatoRepository;
+import org.springframework.stereotype.Service;
 
+@Service
 public class GatoService {
     private final GatoRepository repository;
 
