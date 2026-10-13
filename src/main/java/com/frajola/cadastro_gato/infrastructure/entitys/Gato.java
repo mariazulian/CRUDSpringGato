@@ -1,30 +1,30 @@
-package com.frajola.cadastro_gato.infrastructure.entitys;
+    package com.frajola.cadastro_gato.infrastructure.entitys;
 
-import jakarta.persistence.*;
-import lombok.*;
+    import jakarta.persistence.*;
+    import lombok.*;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@Table(name = "gato")
-@Entity
+    @Getter
+    @Setter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    @Builder
+    @Table(name = "gato")
+    @Entity
 
-public class Gato {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    public class Gato {
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Integer id;
 
-    @Column(name = "idade")
-    private Integer idade;
+        @Column(name = "idade")
+        private Integer idade;
 
-    @Column(name = "raça")
-    private String raca;
+        @Column(name = "raça")
+        private String raca;
 
-    @Column(name = "pelagem")
-    private String pelagem;
+        @Column(name = "pelagem")
+        private String pelagem;
 
-    @Column(name = "sexo")
-    private String sexo;
-}
+        @Column(name = "sexo")
+        private String sexo;
+    }
